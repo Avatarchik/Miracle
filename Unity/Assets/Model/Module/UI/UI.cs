@@ -14,6 +14,7 @@ namespace ETModel
 		}
 	}
 	
+    //UI实体类
 	[HideInHierarchy]
 	public sealed class UI: Entity
 	{

@@ -34,6 +34,8 @@ namespace ETModel
 
         /// <summary>
         /// 应用程序内部资源路径存放路径(www/webrequest专用)
+        /// IOS和Mac OSX 返回地址为$"file://{Application.streamingAssetsPath}
+        /// 其实就是StreamingAssets文件夹
         /// </summary>
         public static string AppResPath4Web
         {

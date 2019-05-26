@@ -47,12 +47,20 @@ namespace ETHotfix
 			await session.Call(new DBSaveRequest { Component = component }, cancellationToken);
 		}
 
+
 		public static async ETVoid SaveLog(this DBProxyComponent self, ComponentWithId component)
 		{
 			Session session = Game.Scene.GetComponent<NetInnerComponent>().Get(self.dbAddress);
 			await session.Call(new DBSaveRequest { Component = component, CollectionName = "Log" });
 		}
 
+        /// <summary>
+        /// 根据id查询
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="self"></param>
+        /// <param name="id"></param>
+        /// <returns></returns>
 		public static async ETTask<T> Query<T>(this DBProxyComponent self, long id) where T: ComponentWithId
 		{
 			Session session = Game.Scene.GetComponent<NetInnerComponent>().Get(self.dbAddress);
@@ -76,6 +84,14 @@ namespace ETHotfix
 			return await self.Query<T>(json);
 		}
 
+
+        /// <summary>
+        /// 根据ID列表查询多个？
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="self"></param>
+        /// <param name="ids"></param>
+        /// <returns></returns>
 		public static async ETTask<List<ComponentWithId>> Query<T>(this DBProxyComponent self, List<long> ids) where T : ComponentWithId
 		{
 			Session session = Game.Scene.GetComponent<NetInnerComponent>().Get(self.dbAddress);

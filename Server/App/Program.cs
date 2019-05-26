@@ -43,7 +43,9 @@ namespace App
 				OuterConfig outerConfig = startConfig.GetComponent<OuterConfig>();
 				InnerConfig innerConfig = startConfig.GetComponent<InnerConfig>();
 				ClientConfig clientConfig = startConfig.GetComponent<ClientConfig>();
-				
+
+                Log.Debug("服务器创建");
+
 				switch (startConfig.AppType)
 				{
 					case AppType.Manager:
@@ -91,8 +93,10 @@ namespace App
 						// 发送location actor消息
 						Game.Scene.AddComponent<ActorLocationSenderComponent>();
 						
-						//Game.Scene.AddComponent<DBComponent>();
-						//Game.Scene.AddComponent<DBProxyComponent>();
+                        //数据库组件 mangodb
+						Game.Scene.AddComponent<DBComponent>();
+                        //数据库组件 增删改查
+						Game.Scene.AddComponent<DBProxyComponent>();
 						
 						// location server需要的组件
 						Game.Scene.AddComponent<LocationComponent>();

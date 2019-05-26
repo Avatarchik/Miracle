@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Net;
 using ETModel;
 
@@ -17,15 +18,42 @@ namespace ETHotfix
 			R2C_Login response = new R2C_Login();
 			try
 			{
-				//if (message.Account != "abcdef" || message.Password != "111111")
-				//{
-				//	response.Error = ErrorCode.ERR_AccountOrPasswordError;
-				//	reply(response);
-				//	return;
-				//}
+                //数据库检测（可删）
+                //if (message.Account != "abcdef" || message.Password != "111111")
+                //{
+                //	response.Error = ErrorCode.ERR_AccountOrPasswordError;
+                //	reply(response);
+                //	return;
+                //}
 
-				// 随机分配一个Gate
-				StartConfig config = Game.Scene.GetComponent<RealmGateAddressComponent>().GetAddress();
+                DBProxyComponent dbProxy = Game.Scene.GetComponent<DBProxyComponent>();
+                List<ComponentWithId> accounts = await dbProxy.Query<Account>($"{{\'usernam\':\'{message.Account}\'}}");
+
+
+                /*
+                //TODO 数据库相关功能   mangodb数据库根据json查询条件查询
+                DBProxyComponent dbProxy = Game.Scene.GetComponent<DBProxyComponent>();
+                List<ComponentWithId> accounts= await dbProxy.Query<Account>($"{{\'usernam\':\'{message.Account}\'}}");
+                //如果没有查找到玩家
+                if (accounts.Count==0)
+                {
+                    Account account = new Account();
+                    //保存账号
+                    await dbProxy.Save(account);
+                }
+                else
+                {
+                    Account account = (Account)accounts[0];
+                    if (message.Password!=account.password)
+                    {
+                        return;
+                    }
+                }
+                */
+
+
+                // 随机分配一个Gate
+                StartConfig config = Game.Scene.GetComponent<RealmGateAddressComponent>().GetAddress();
 				//Log.Debug($"gate address: {MongoHelper.ToJson(config)}");
 				IPEndPoint innerAddress = config.GetComponent<InnerConfig>().IPEndPoint;
 				Session gateSession = Game.Scene.GetComponent<NetInnerComponent>().Get(innerAddress);

@@ -2,8 +2,9 @@
 {
 	public static class Define
 	{
+        //在编辑器模式下并且非异步的情况下返回false，其他情况下IsAsync都是ture，意味着打包出来后必然会进行热更
 #if UNITY_EDITOR && !ASYNC
-		public static bool IsAsync = false;
+        public static bool IsAsync = false;
 #else
         public static bool IsAsync = true;
 #endif

@@ -13,6 +13,7 @@ namespace ETHotfix
 		}
 	}
 	
+
 	public class UILobbyComponent : Component
 	{
 		private GameObject enterMap;
@@ -30,8 +31,11 @@ namespace ETHotfix
 
 		private void EnterMap()
 		{
+            //异步进入Map
 			MapHelper.EnterMapAsync().Coroutine();
 		}
+        //客户端逻辑：个人猜测
+        //点击UI通过Helper执行逻辑发送消息或者跳转场景，或在Helper中通过消息机制执行方法创建界面
 		
 
 	}

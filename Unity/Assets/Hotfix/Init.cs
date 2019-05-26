@@ -35,10 +35,12 @@ namespace ETHotfix
 				Game.Scene.AddComponent<ConfigComponent>();
 				ETModel.Game.Scene.GetComponent<ResourcesComponent>().UnloadBundle("config.unity3d");
 
-				UnitConfig unitConfig = (UnitConfig)Game.Scene.GetComponent<ConfigComponent>().Get(typeof(UnitConfig), 1001);
-				Log.Debug($"config {JsonHelper.ToJson(unitConfig)}");
+                //测试加载的配置  测试代码
+                //UnitConfig unitConfig = (UnitConfig)Game.Scene.GetComponent<ConfigComponent>().Get(typeof(UnitConfig), 1001);
+                //Log.Debug($"config {JsonHelper.ToJson(unitConfig)}");
 
-				Game.EventSystem.Run(EventIdType.InitSceneStart);
+                //调用\Unity\Assets\Hotfix\Module\Demo\UI\UILogin\System\InitSceneStart_CreateLoginUI.cs    创建UILogin 
+                Game.EventSystem.Run(EventIdType.CreateLoginPanel);
 			}
 			catch (Exception e)
 			{

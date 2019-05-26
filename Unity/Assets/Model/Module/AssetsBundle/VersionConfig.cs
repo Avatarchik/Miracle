@@ -12,10 +12,13 @@ namespace ETModel
 
 	public class VersionConfig : Object
 	{
+        //版本号
 		public int Version;
 		
 		public long TotalSize;
 		
+
+        //文件信息字典
 		[BsonIgnore]
 		public Dictionary<string, FileVersionInfo> FileInfoDict = new Dictionary<string, FileVersionInfo>();
 

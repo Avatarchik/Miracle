@@ -5,6 +5,7 @@ namespace ETHotfix
 {
     public static class LoginHelper
     {
+        //不懂TODO
         public static async ETVoid OnLoginAsync(string account)
         {
             try
@@ -33,6 +34,7 @@ namespace ETHotfix
                 PlayerComponent playerComponent = ETModel.Game.Scene.GetComponent<PlayerComponent>();
                 playerComponent.MyPlayer = player;
 
+                //消息机制调用
                 Game.EventSystem.Run(EventIdType.LoginFinish);
 
                 // 测试消息有成员是class类型

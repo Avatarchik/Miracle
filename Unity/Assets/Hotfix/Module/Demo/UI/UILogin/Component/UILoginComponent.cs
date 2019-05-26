@@ -7,7 +7,7 @@ using UnityEngine.UI;
 namespace ETHotfix
 {
 	[ObjectSystem]
-	public class UiLoginComponentSystem : AwakeSystem<UILoginComponent>
+	public class UILoginComponentSystem : AwakeSystem<UILoginComponent>
 	{
 		public override void Awake(UILoginComponent self)
 		{
@@ -15,7 +15,7 @@ namespace ETHotfix
 		}
 	}
 	
-	public class UILoginComponent: Component
+	public class UILoginComponent : Component
 	{
 		private GameObject account;
 		private GameObject loginBtn;

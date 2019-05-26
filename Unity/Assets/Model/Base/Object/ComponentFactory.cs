@@ -182,20 +182,26 @@ namespace ETModel
 			T component;
 			if (fromPool)
 			{
-				component = (T)Game.ObjectPool.Fetch(type);
+                //fromPool为true，则通过对象池获取
+                component = (T)Game.ObjectPool.Fetch(type);
 			}
 			else
 			{
+                //否则就创建一个实例
 				component = (T)Activator.CreateInstance(type);	
 			}
 			
+            //将获取到的组件添加到事件系统
 			Game.EventSystem.Add(component);
-
-			if (component is ComponentWithId componentWithId)
+            
+            //这里不太懂 TODO   组件继承了Entity，Entity继承了ComponentWithId，这里同步了一下？
+            if (component is ComponentWithId componentWithId)
 			{
 				componentWithId.Id = component.InstanceId;
 			}
+            //事件系统的Awake方法  例如创建ui时传入的是 组件，name，gameobject引用
 			Game.EventSystem.Awake(component, a, b);
+            //返回组件
 			return component;
 		}
 

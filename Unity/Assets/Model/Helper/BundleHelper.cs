@@ -5,18 +5,27 @@ using UnityEngine;
 
 namespace ETModel
 {
+    
 	public static class BundleHelper
 	{
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
 		public static async ETTask DownloadBundle()
 		{
+            //通过预定义符判断是否是异步下载
 			if (Define.IsAsync)
 			{
 				try
 				{
+                    //获取AssetsBudle下载组件，从web端下载，并对比md5码，对比资源
 					using (BundleDownloaderComponent bundleDownloaderComponent = Game.Scene.AddComponent<BundleDownloaderComponent>())
 					{
-						await bundleDownloaderComponent.StartAsync();
+                        //拿到远程和本地所有不需要热更的bundle
+                        await bundleDownloaderComponent.StartAsync();
 						
+                        //通过事件系统调用显示加载界面
 						Game.EventSystem.Run(EventIdType.LoadingBegin);
 						
 						await bundleDownloaderComponent.DownloadAsync();

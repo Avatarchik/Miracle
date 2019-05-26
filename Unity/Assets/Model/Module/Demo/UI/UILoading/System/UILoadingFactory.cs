@@ -5,6 +5,7 @@ namespace ETModel
 {
     public static class UILoadingFactory
     {
+        //获取热更加载进度界面的引用KV
         public static UI Create()
         {
 	        try

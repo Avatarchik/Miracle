@@ -1,4 +1,4 @@
-﻿using System;
+﻿    using System;
 using ETModel;
 using PF;
 using UnityEngine;
@@ -18,12 +18,18 @@ namespace ETHotfix
 			M2G_CreateUnit response = new M2G_CreateUnit();
 			try
 			{
+                //通过组件工厂创建了Unit
 				Unit unit = ComponentFactory.CreateWithId<Unit>(IdGenerater.GenerateId());
+                //添加移动组件
 				unit.AddComponent<MoveComponent>();
+                //添加A*寻路算法组件
 				unit.AddComponent<UnitPathComponent>();
+                //设置出生点
 				unit.Position = new Vector3(-10, 0, -10);
 				
+                //添加了一个收消息
 				await unit.AddComponent<MailBoxComponent>().AddLocation();
+
 				unit.AddComponent<UnitGateComponent, long>(message.GateSessionId);
 				Game.Scene.GetComponent<UnitComponent>().Add(unit);
 				response.UnitId = unit.Id;
@@ -39,7 +45,7 @@ namespace ETHotfix
 					unitInfo.Y = u.Position.y;
 					unitInfo.Z = u.Position.z;
 					unitInfo.UnitId = u.Id;
-					createUnits.Units.Add(unitInfo);
+					createUnits.Units.Add(unitInfo);   //把刚生成的玩家id和位置响应回去
 				}
 				MessageHelper.Broadcast(createUnits);
 				
