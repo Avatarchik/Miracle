@@ -6,7 +6,13 @@
 --|:--:
 V1.0| ET最新版本5.0，在原版的多人联网的demo上尝试了自己写了一个和服务器通信的Demo，并且添加了一些注释，可以用来当一个模版来使用。
 
-此版本说明只是记录个人学习和使用情况节点，和熊猫的更新版本无关。
+此版本说明只是记录个人学习和使用情况节点。
+
+在Mac上生成协议代码，启动web资源服务器，启动服务器等，可以使用Unity/Assets/MacOS_Start文件夹中的三个.command命令文件。  
+使用需知：  
+1.分别打开三个文件修改对应的路径。  
+2.Start_FileServer.command需要打包后生成了Web资源服务器的路径后才可使用。  
+3.Proto2CS.command需要ProtoforMac.zip中的dllh和pdb文件，详细可以看ProtoforMac文件夹中的ReadMe.md。  
 
 # [English](https://github.com/egametang/Egametang/blob/master/README-EN.md) 
 
