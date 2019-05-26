@@ -1,3 +1,13 @@
+系统：Win10 \ MacOS10.14.5  
+工具版本：Unity 2018 \ Visual Studio 2018&2019  
+需要安装的软件：MongoDB \ .net core2.2  
+
+版本|说明
+--|:--:
+V1.0| ET最新版本5.0，在原版的多人联网的demo上尝试了自己写了一个和服务器通信的Demo，并且添加了一些注释，可以用来当一个模版来使用。
+
+此版本说明只是记录个人学习和使用情况节点，和熊猫的更新版本无关。
+
 # [English](https://github.com/egametang/Egametang/blob/master/README-EN.md) 
 
 __讨论QQ群 : 474643097__  
