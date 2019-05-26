@@ -1,5 +1,5 @@
-系统：Win10 \ MacOS10.14.5  
-工具版本：Unity 2018 \ Visual Studio 2018&2019  
+系统：Win10 \ MacOS 10.14.5  
+工具版本：Unity 2018 \ Visual Studio 2018 & 2019  
 需要安装的软件：MongoDB \ .net core2.2  
 
 版本|说明
