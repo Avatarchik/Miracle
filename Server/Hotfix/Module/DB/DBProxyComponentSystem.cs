@@ -112,5 +112,54 @@ namespace ETHotfix
 			DBQueryJsonResponse dbQueryJsonResponse = (DBQueryJsonResponse)await session.Call(new DBQueryJsonRequest { CollectionName = typeof(T).Name, Json = json });
 			return dbQueryJsonResponse.Components;
 		}
-	}
+
+
+
+        public static async ETTask Delete<T>(this DBProxyComponent self, long id)
+        {
+            DBComponent dbComponent = Game.Scene.GetComponent<DBComponent>();
+            await dbComponent.GetCollection(typeof(T).Name).DeleteOneAsync(i => i.Id == id);
+        }
+
+        /// <summary>
+        /// 清空表
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="self"></param>
+        /// <returns></returns>
+        public static async ETTask DeleteAll<T>(this DBProxyComponent self)
+        {
+            DBComponent dbComponent = Game.Scene.GetComponent<DBComponent>();
+            var filter = Builders<ComponentWithId>.Filter.Empty;
+            await dbComponent.GetCollection(typeof(T).Name).DeleteManyAsync(filter);
+        }
+
+        /// <summary>
+        /// 根据表达式删除
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="self"></param>
+        /// <param name="exp"></param>
+        /// <returns></returns>
+        public static async ETTask DeleteAll<T>(this DBProxyComponent self, Expression<Func<T, bool>> exp)
+        {
+            //拉姆塔表达式非常好用
+            DBComponent dbComponent = Game.Scene.GetComponent<DBComponent>();
+            ExpressionFilterDefinition<T> filter = new ExpressionFilterDefinition<T>(exp);
+            IBsonSerializerRegistry serializerRegistry = BsonSerializer.SerializerRegistry;
+            IBsonSerializer<T> documentSerializer = serializerRegistry.GetSerializer<T>();
+            string json = filter.Render(documentSerializer, serializerRegistry).ToJson();
+            await dbComponent.GetCollection(typeof(T).Name).FindOneAndDeleteAsync(json);
+        }
+
+        public static void Update<T>(this DBProxyComponent self, string fieldname, string fieldvalue, string aaa)
+        {
+            //第一个参数是需要更改的在数据库中的对象  第二个是要更改的对象的值  第三个是更改后的对象的值 对象也可以改 多传点参数就行
+            DBComponent dbComponent = Game.Scene.GetComponent<DBComponent>();
+            var filter1 = Builders<ComponentWithId>.Filter.Eq(fieldname, fieldvalue);
+            var updata1 = Builders<ComponentWithId>.Update.Set(fieldname, aaa);
+            dbComponent.GetCollection(typeof(T).Name).UpdateOne(filter1, updata1);
+
+        }
+    }
 }
