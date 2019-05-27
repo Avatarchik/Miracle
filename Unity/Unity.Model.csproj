@@ -290,6 +290,9 @@
     <Compile Include="Assets\Model\ILBinding\UnityEngine_UI_InputField_Binding.cs" />
     <Compile Include="Assets\Model\ILBinding\UnityEngine_Vector3_Binding.cs" />
     <Compile Include="Assets\Model\Init.cs" />
+    <Compile Include="Assets\Model\Joystic\RockerCotroller.cs" />
+    <Compile Include="Assets\Model\Joystic\UIEventTrigger.cs" />
+    <Compile Include="Assets\Model\Joystic\UIJoystick.cs" />
     <Compile Include="Assets\Model\Module\Actor\IActorMessage.cs" />
     <Compile Include="Assets\Model\Module\ActorLocation\IActorLocationMessage.cs" />
     <Compile Include="Assets\Model\Module\AssetsBundle\AssetsBundleLoaderAsync.cs" />

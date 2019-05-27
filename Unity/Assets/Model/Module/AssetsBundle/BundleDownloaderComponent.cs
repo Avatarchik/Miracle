@@ -46,7 +46,7 @@ namespace ETModel
 			{
 				using (UnityWebRequestAsync webRequestAsync = ComponentFactory.Create<UnityWebRequestAsync>())
 				{
-                    //web资源服务器地址 本地为 http://127.0.0.1：8080/PC/    （PC为平台）
+                    //web资源服务器地址 本地为http://127.0.0.1：8080/PC/    （PC为平台）
 					versionUrl = GlobalConfigComponent.Instance.GlobalProto.GetUrl() + "StreamingAssets/" + "Version.txt";
 					Log.Debug("web资源服务器地址" + versionUrl);
                     //开始下载版本信息
@@ -68,11 +68,12 @@ namespace ETModel
             //地址合并  拿到本地版本信息文件路径
 			string versionPath = Path.Combine(PathHelper.AppResPath4Web, "Version.txt");
             Log.Debug("本地Version.txt地址：" + versionPath);
-            //
+
 			using (UnityWebRequestAsync request = ComponentFactory.Create<UnityWebRequestAsync>())
 			{
 				await request.DownloadAsync(versionPath);
 				streamingVersionConfig = JsonHelper.FromJson<VersionConfig>(request.Request.downloadHandler.text);
+                Log.Debug("本地Version.txt内容："+ streamingVersionConfig);
 			}
 			
 

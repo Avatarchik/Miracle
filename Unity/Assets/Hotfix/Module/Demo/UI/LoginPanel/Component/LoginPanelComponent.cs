@@ -29,7 +29,8 @@ namespace ETHotfix
 
             loginButton.onClick.Add(() =>
             {
-                Log.Debug("登录成功");
+                
+                Log.Debug("向服务器发送登录消息");
                 Game.Scene.GetComponent<UIComponent>().Remove(UIType.LoginPanel);
                 ETModel.Game.Scene.GetComponent<ResourcesComponent>().UnloadBundle(UIType.LoginPanel.StringToAB());
             });

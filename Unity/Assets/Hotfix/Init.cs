@@ -40,6 +40,7 @@ namespace ETHotfix
                 //Log.Debug($"config {JsonHelper.ToJson(unitConfig)}");
 
                 //调用\Unity\Assets\Hotfix\Module\Demo\UI\UILogin\System\InitSceneStart_CreateLoginUI.cs    创建UILogin 
+                //生成初始UI界面
                 Game.EventSystem.Run(EventIdType.CreateLoginPanel);
 			}
 			catch (Exception e)
