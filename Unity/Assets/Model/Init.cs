@@ -30,7 +30,7 @@ namespace ETModel
                 Game.EventSystem.Add(DLLType.Model, typeof(Init).Assembly);
 
                 //计时器
-				Game.Scene.AddComponent<TimerComponent>();
+                Game.Scene.AddComponent<TimerComponent>();
                 //全局配置数据（服务器的链接IP、资源服务器的HTTP地址）
                 Game.Scene.AddComponent<GlobalConfigComponent>();
                 //联网组件（进行服务器通讯用的组件）

@@ -41,7 +41,7 @@ namespace ETHotfix
 
                 //调用\Unity\Assets\Hotfix\Module\Demo\UI\UILogin\System\InitSceneStart_CreateLoginUI.cs    创建UILogin 
                 //生成初始UI界面
-                Game.EventSystem.Run(EventIdType.CreateLoginPanel);
+                Game.EventSystem.Run(EventIdType.InitSceneStart);
 			}
 			catch (Exception e)
 			{
