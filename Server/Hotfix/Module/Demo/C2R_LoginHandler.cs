@@ -26,30 +26,31 @@ namespace ETHotfix
                 //	return;
                 //}
 
-                DBProxyComponent dbProxy = Game.Scene.GetComponent<DBProxyComponent>();
-                List<ComponentWithId> accounts = await dbProxy.Query<Account>($"{{\'usernam\':\'{message.Account}\'}}");
 
 
-                /*
+
                 //TODO 数据库相关功能   mangodb数据库根据json查询条件查询
                 DBProxyComponent dbProxy = Game.Scene.GetComponent<DBProxyComponent>();
-                List<ComponentWithId> accounts= await dbProxy.Query<Account>($"{{\'usernam\':\'{message.Account}\'}}");
+                List<ComponentWithId> accounts= await dbProxy.Query<Account>($"{{\'username\':\'{message.Account}\'}}");
                 //如果没有查找到玩家
                 if (accounts.Count==0)
                 {
                     Account account = new Account();
+                    Log.Debug("账号不存在，正在保存账号");
                     //保存账号
                     await dbProxy.Save(account);
                 }
                 else
                 {
                     Account account = (Account)accounts[0];
+                    Log.Debug("查找到了" +accounts);
                     if (message.Password!=account.password)
                     {
+                    Log.Debug("密码正确");
                         return;
                     }
                 }
-                */
+
 
 
                 // 随机分配一个Gate
