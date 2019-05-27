@@ -106,6 +106,12 @@
     <Compile Include="Assets\Hotfix\Module\Demo\UI\LoginPanel\Component\LoginPanelComponent.cs" />
     <Compile Include="Assets\Hotfix\Module\Demo\UI\LoginPanel\System\CreateLoginPanelEvent.cs" />
     <Compile Include="Assets\Hotfix\Module\Demo\UI\LoginPanel\System\LoginPanelFactory.cs" />
+    <Compile Include="Assets\Hotfix\Module\Demo\UI\UIChoiceCharacterPanel\Component\LoginPanelComponent.cs" />
+    <Compile Include="Assets\Hotfix\Module\Demo\UI\UIChoiceCharacterPanel\System\LoginPanelFactory.cs" />
+    <Compile Include="Assets\Hotfix\Module\Demo\UI\UIChoiceServer\Component\LoginPanelComponent.cs" />
+    <Compile Include="Assets\Hotfix\Module\Demo\UI\UIChoiceServer\System\LoginPanelFactory.cs" />
+    <Compile Include="Assets\Hotfix\Module\Demo\UI\UICreateCharacterPanel\Component\LoginPanelComponent.cs" />
+    <Compile Include="Assets\Hotfix\Module\Demo\UI\UICreateCharacterPanel\System\LoginPanelFactory.cs" />
     <Compile Include="Assets\Hotfix\Module\Demo\UI\UILobby\Component\UILobbyComponent.cs" />
     <Compile Include="Assets\Hotfix\Module\Demo\UI\UILobby\System\EnterMapFinish_RemoveLobbyUI.cs" />
     <Compile Include="Assets\Hotfix\Module\Demo\UI\UILobby\System\LoginFinish_CreateLobbyUI.cs" />
@@ -114,6 +120,12 @@
     <Compile Include="Assets\Hotfix\Module\Demo\UI\UILogin\System\InitSceneStart_CreateLoginUI.cs" />
     <Compile Include="Assets\Hotfix\Module\Demo\UI\UILogin\System\LoginFinish_RemoveLoginUI.cs" />
     <Compile Include="Assets\Hotfix\Module\Demo\UI\UILogin\System\UILoginFactory.cs" />
+    <Compile Include="Assets\Hotfix\Module\Demo\UI\UILoginPanel\Component\LoginPanelComponent.cs" />
+    <Compile Include="Assets\Hotfix\Module\Demo\UI\UILoginPanel\System\LoginPanelFactory.cs" />
+    <Compile Include="Assets\Hotfix\Module\Demo\UI\UIMainPanel\Component\LoginPanelComponent.cs" />
+    <Compile Include="Assets\Hotfix\Module\Demo\UI\UIMainPanel\System\LoginPanelFactory.cs" />
+    <Compile Include="Assets\Hotfix\Module\Demo\UI\UIRegisterPanel\Component\LoginPanelComponent.cs" />
+    <Compile Include="Assets\Hotfix\Module\Demo\UI\UIRegisterPanel\System\LoginPanelFactory.cs" />
     <Compile Include="Assets\Hotfix\Module\Message\AMHandler.cs" />
     <Compile Include="Assets\Hotfix\Module\Message\HotfixMessage.cs" />
     <Compile Include="Assets\Hotfix\Module\Message\HotfixMessageDispatcher.cs" />
