@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Net;
 using ETModel;
 using UnityEngine;
@@ -7,15 +8,15 @@ using UnityEngine.UI;
 namespace ETHotfix
 {
     [ObjectSystem]
-    public class LoginPanelComponentSystem : AwakeSystem<LoginPanelComponent>
+    public class UIChoiceCharacterPanelComponentSystem : AwakeSystem<UIChoiceCharacterPanelComponent>
     {
-        public override void Awake(LoginPanelComponent self)
+        public override void Awake(UIChoiceCharacterPanelComponent self)
         {
             self.Awake();
         }
     }
 
-    public class LoginPanelComponent : Component
+    public class UIChoiceCharacterPanelComponent : Component
     {
         public InputField usernameInput;
         public Button loginButton;

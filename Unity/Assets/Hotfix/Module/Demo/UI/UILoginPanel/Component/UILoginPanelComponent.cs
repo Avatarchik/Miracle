@@ -7,15 +7,15 @@ using UnityEngine.UI;
 namespace ETHotfix
 {
     [ObjectSystem]
-    public class LoginPanelComponentSystem : AwakeSystem<LoginPanelComponent>
+    public class UILoginPanelComponentSystem : AwakeSystem<UILoginPanelComponent>
     {
-        public override void Awake(LoginPanelComponent self)
+        public override void Awake(UILoginPanelComponent self)
         {
             self.Awake();
         }
     }
 
-    public class LoginPanelComponent : Component
+    public class UILoginPanelComponent : Component
     {
         public InputField usernameInput;
         public Button loginButton;

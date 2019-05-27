@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace ETHotfix 
 {
-    public static class LoginPanelFactory
+    public static class UIRegisterPanelFactory
     {
         public static UI Create()
         {

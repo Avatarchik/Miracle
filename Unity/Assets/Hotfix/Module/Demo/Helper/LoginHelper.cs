@@ -19,6 +19,7 @@ namespace ETHotfix
                 realmSession.Dispose();
 
                 // 创建一个ETModel层的Session,并且保存到ETModel.SessionComponent中
+                Log.Debug("r2CLogin.Address:" + r2CLogin.Address);
                 ETModel.Session gateSession = ETModel.Game.Scene.GetComponent<NetOuterComponent>().Create(r2CLogin.Address);
                 ETModel.Game.Scene.AddComponent<ETModel.SessionComponent>().Session = gateSession;
 				
