@@ -22,6 +22,9 @@ namespace ETHotfix
 		}
 	}
 
+    /// <summary>
+    /// 操作码组件，用于对操作码的操作
+    /// </summary>
 	public class OpcodeTypeComponent : Component
 	{
 		private readonly DoubleMap<ushort, Type> opcodeTypes = new DoubleMap<ushort, Type>();

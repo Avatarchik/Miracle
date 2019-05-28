@@ -21,16 +21,17 @@ namespace ETHotfix
 			
 			try
 			{
-				// 注册热更层回调
+				// 注册热更层回调事件
 				ETModel.Game.Hotfix.Update = () => { Update(); };
 				ETModel.Game.Hotfix.LateUpdate = () => { LateUpdate(); };
 				ETModel.Game.Hotfix.OnApplicationQuit = () => { OnApplicationQuit(); };
 				
+                //添加热更层组件
 				Game.Scene.AddComponent<UIComponent>();
 				Game.Scene.AddComponent<OpcodeTypeComponent>();
 				Game.Scene.AddComponent<MessageDispatcherComponent>();
 
-				// 加载热更配置
+				// 对游戏的配置文件进行热更
 				ETModel.Game.Scene.GetComponent<ResourcesComponent>().LoadBundle("config.unity3d");
 				Game.Scene.AddComponent<ConfigComponent>();
 				ETModel.Game.Scene.GetComponent<ResourcesComponent>().UnloadBundle("config.unity3d");
@@ -41,9 +42,16 @@ namespace ETHotfix
 
                 //调用\Unity\Assets\Hotfix\Module\Demo\UI\UILogin\System\InitSceneStart_CreateLoginUI.cs    创建UILogin 
                 //生成初始UI界面
-                Game.EventSystem.Run(EventIdType.InitSceneStart);
-			}
-			catch (Exception e)
+                Game.EventSystem.Run(EventIdType.GameStartLogin);
+                /*
+                 * 目前有三个入口:
+                 * 1. EventIdType.InitSceneStart 可以进入熊猫ET自带的多人联机Demo，这个算是官方案例，极好的熟悉框架的demo
+                 * 2. EventIdType.CreateLoginPanel 这是一个极度简单的登录，能够和服务器进行简单到不能再简单的通信，整个简单到不能再简单
+                 * 3. EventIdType.GameStartLogin 一个正在做的小游戏，预期是ARPG或者RPG，emmm目前已经过了一周零2天了，
+                 *    进度UI刚搭到主界面，底下各个分支还没有搭建，并且没有整体的模块图（2019年5月28日14点39分）
+                 */
+            }
+            catch (Exception e)
 			{
 				Log.Error(e);
 			}

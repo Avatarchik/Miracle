@@ -1093,7 +1093,7 @@ GameObject:
   - component: {fileID: 874136082924097096}
   - component: {fileID: 874136082924097097}
   m_Layer: 5
-  m_Name: CreateButton
+  m_Name: createButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1830,8 +1830,6 @@ MonoBehaviour:
     gameObject: {fileID: 874136082396993638}
   - key: toxotaeButton
     gameObject: {fileID: 874136081662825268}
-  - key: CreateButton
-    gameObject: {fileID: 874136082924097099}
   - key: nicknameInputField
     gameObject: {fileID: 874136081945971238}
   - key: capacityShowText
@@ -1842,6 +1840,10 @@ MonoBehaviour:
     gameObject: {fileID: 874136082072793264}
   - key: backCreateButton
     gameObject: {fileID: 3851617723745293571}
+  - key: characterShowRawImage
+    gameObject: {fileID: 874136081818971497}
+  - key: createButton
+    gameObject: {fileID: 874136082924097099}
 --- !u!1 &7922297505144588990
 GameObject:
   m_ObjectHideFlags: 0

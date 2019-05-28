@@ -17,30 +17,32 @@ namespace ETHotfix
 
     public class UICreateCharacterPanelComponent : Component
     {
-        public InputField usernameInput;
-        public Button loginButton;
+        public Button createButton;
+        public RawImage characterShowRawImage;
+        public Button backCreateButton;
+        public Button randomNameButton;
+        public Text yourChoiceText;
+        public Text capacityShowText;
+        public InputField nicknameInputField;
+        public Button toxotaeButton;
+        public Button magicianButton;
+        public Button swordmanButton;
 
         public void Awake()
         {
-
             ReferenceCollector rc = this.GetParent<UI>().GameObject.GetComponent<ReferenceCollector>();
-            usernameInput = rc.Get<GameObject>("usernameInputField").GetComponent<InputField>();
-            loginButton = rc.Get<GameObject>("loginButton").GetComponent<Button>();
-
-            loginButton.onClick.Add(() =>
-            {
-                
-                Log.Debug("向服务器发送登录消息");
-                Game.Scene.GetComponent<UIComponent>().Remove(UIType.LoginPanel);
-                ETModel.Game.Scene.GetComponent<ResourcesComponent>().UnloadBundle(UIType.LoginPanel.StringToAB());
-            });
-
-            loginButton.onClick.Add(TestCall);
+            createButton = rc.Get<GameObject>("createButton").GetComponent<Button>();
+            characterShowRawImage = rc.Get<GameObject>("characterShowRawImage").GetComponent<RawImage>();
+            backCreateButton = rc.Get<GameObject>("backCreateButton").GetComponent<Button>();
+            randomNameButton = rc.Get<GameObject>("randomNameButton").GetComponent<Button>();
+            yourChoiceText = rc.Get<GameObject>("yourChoiceText").GetComponent<Text>();
+            capacityShowText = rc.Get<GameObject>("capacityShowText").GetComponent<Text>();
+            nicknameInputField = rc.Get<GameObject>("nicknameInputField").GetComponent<InputField>();
+            toxotaeButton = rc.Get<GameObject>("toxotaeButton").GetComponent<Button>();
+            magicianButton = rc.Get<GameObject>("magicianButton").GetComponent<Button>();
+            swordmanButton = rc.Get<GameObject>("swordmanButton").GetComponent<Button>();
         }
 
-        private void TestCall()
-        {
-            TestCallHelper.OnTestCall().Coroutine();
-        }
+
     }
 }

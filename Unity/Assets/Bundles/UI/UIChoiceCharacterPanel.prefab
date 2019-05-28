@@ -605,7 +605,7 @@ GameObject:
   - component: {fileID: 2988863323938451316}
   - component: {fileID: 2988863323938451317}
   m_Layer: 5
-  m_Name: BeginButton
+  m_Name: beginButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1735,8 +1735,6 @@ MonoBehaviour:
     gameObject: {fileID: 7756339295158683227}
   - key: character5Button
     gameObject: {fileID: 2309540202831250733}
-  - key: BeginButton
-    gameObject: {fileID: 2988863323938451319}
   - key: yournameText
     gameObject: {fileID: 2988863325043406382}
   - key: yourChoiceText
@@ -1747,6 +1745,8 @@ MonoBehaviour:
     gameObject: {fileID: 376546119828824526}
   - key: removeCharacterButton
     gameObject: {fileID: 1653804423}
+  - key: beginButton
+    gameObject: {fileID: 2988863323938451319}
 --- !u!1 &5236202996640705410
 GameObject:
   m_ObjectHideFlags: 0

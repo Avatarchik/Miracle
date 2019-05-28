@@ -274,12 +274,8 @@ MonoBehaviour:
     gameObject: {fileID: 7718632045288837300}
   - key: timeText
     gameObject: {fileID: 7718632045503376961}
-  - key: ChatText
-    gameObject: {fileID: 7718632044552237597}
   - key: friendButton
     gameObject: {fileID: 7718632045603266617}
-  - key: voieChatButton
-    gameObject: {fileID: 7718632045043371313}
   - key: bagButton
     gameObject: {fileID: 7718632045798464724}
   - key: liveButton
@@ -310,6 +306,10 @@ MonoBehaviour:
     gameObject: {fileID: 7718632045168620563}
   - key: joystic
     gameObject: {fileID: 7718632046124118406}
+  - key: chatText
+    gameObject: {fileID: 7718632044552237597}
+  - key: voiceChatButton
+    gameObject: {fileID: 7718632045043371313}
 --- !u!1 &7718632044298784544
 GameObject:
   m_ObjectHideFlags: 0
@@ -1447,7 +1447,7 @@ GameObject:
   - component: {fileID: 7718632044552237584}
   - component: {fileID: 7718632044552237599}
   m_Layer: 5
-  m_Name: ChatText
+  m_Name: chatText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2818,7 +2818,7 @@ GameObject:
   - component: {fileID: 7718632045043371316}
   - component: {fileID: 7718632045043371315}
   m_Layer: 5
-  m_Name: voieChatButton
+  m_Name: voiceChatButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

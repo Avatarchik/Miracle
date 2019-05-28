@@ -7,7 +7,7 @@ using UnityEngine.UI;
 namespace ETHotfix
 {
     [ObjectSystem]
-    public class  UIRegisterPanelComponentSystem : AwakeSystem<UIRegisterPanelComponent>
+    public class UIRegisterPanelComponentSystem : AwakeSystem<UIRegisterPanelComponent>
     {
         public override void Awake(UIRegisterPanelComponent self)
         {
@@ -17,30 +17,24 @@ namespace ETHotfix
 
     public class UIRegisterPanelComponent : Component
     {
-        public InputField usernameInput;
-        public Button loginButton;
+        public Button noticeButton;
+        public Button accountButton;
+        public Button backButton;
+        public Button registerButton;
+        public InputField passwordInputField;
+        public InputField usernameInputField;
 
         public void Awake()
         {
-
             ReferenceCollector rc = this.GetParent<UI>().GameObject.GetComponent<ReferenceCollector>();
-            usernameInput = rc.Get<GameObject>("usernameInputField").GetComponent<InputField>();
-            loginButton = rc.Get<GameObject>("loginButton").GetComponent<Button>();
-
-            loginButton.onClick.Add(() =>
-            {
-                
-                Log.Debug("向服务器发送登录消息");
-                Game.Scene.GetComponent<UIComponent>().Remove(UIType.LoginPanel);
-                ETModel.Game.Scene.GetComponent<ResourcesComponent>().UnloadBundle(UIType.LoginPanel.StringToAB());
-            });
-
-            loginButton.onClick.Add(TestCall);
+            noticeButton = rc.Get<GameObject>("noticeButton").GetComponent<Button>();
+            accountButton = rc.Get<GameObject>("accountButton").GetComponent<Button>();
+            backButton = rc.Get<GameObject>("backButton").GetComponent<Button>();
+            registerButton = rc.Get<GameObject>("registerButton").GetComponent<Button>();
+            passwordInputField = rc.Get<GameObject>("passwordInputField").GetComponent<InputField>();
+            usernameInputField = rc.Get<GameObject>("usernameInputField").GetComponent<InputField>();
         }
 
-        private void TestCall()
-        {
-            TestCallHelper.OnTestCall().Coroutine();
-        }
+
     }
 }

@@ -470,14 +470,14 @@ MonoBehaviour:
   data:
   - key: beginButton
     gameObject: {fileID: 9218866994597191681}
-  - key: Dropdown
-    gameObject: {fileID: 9218866995728645615}
-  - key: Label
-    gameObject: {fileID: 9218866994210426557}
   - key: accountButton
     gameObject: {fileID: 521285522282690442}
   - key: noticeButton
     gameObject: {fileID: 9218079274862747545}
+  - key: serversDropdown
+    gameObject: {fileID: 9218866995728645615}
+  - key: selectLabel
+    gameObject: {fileID: 9218866994210426557}
 --- !u!1 &7588495846120589106
 GameObject:
   m_ObjectHideFlags: 0
@@ -805,7 +805,7 @@ GameObject:
   - component: {fileID: 9218866994210426496}
   - component: {fileID: 9218866994210426499}
   m_Layer: 5
-  m_Name: Label
+  m_Name: selectLabel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1549,7 +1549,7 @@ GameObject:
   - component: {fileID: 9218866995728645618}
   - component: {fileID: 9218866995728645613}
   m_Layer: 5
-  m_Name: Dropdown
+  m_Name: serversDropdown
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

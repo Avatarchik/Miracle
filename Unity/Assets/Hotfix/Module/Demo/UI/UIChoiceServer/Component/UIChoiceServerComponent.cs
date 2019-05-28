@@ -17,30 +17,21 @@ namespace ETHotfix
 
     public class UIChoiceServerComponent : Component
     {
-        public InputField usernameInput;
-        public Button loginButton;
+        public Text selectLabel;
+        public Dropdown serversDropdown;
+        public Button noticeButton;
+        public Button accountButton;
+        public Button beginButton;
 
         public void Awake()
         {
-
             ReferenceCollector rc = this.GetParent<UI>().GameObject.GetComponent<ReferenceCollector>();
-            usernameInput = rc.Get<GameObject>("usernameInputField").GetComponent<InputField>();
-            loginButton = rc.Get<GameObject>("loginButton").GetComponent<Button>();
-
-            loginButton.onClick.Add(() =>
-            {
-                
-                Log.Debug("向服务器发送登录消息");
-                Game.Scene.GetComponent<UIComponent>().Remove(UIType.LoginPanel);
-                ETModel.Game.Scene.GetComponent<ResourcesComponent>().UnloadBundle(UIType.LoginPanel.StringToAB());
-            });
-
-            loginButton.onClick.Add(TestCall);
+            selectLabel = rc.Get<GameObject>("selectLabel").GetComponent<Text>();
+            serversDropdown = rc.Get<GameObject>("serversDropdown").GetComponent<Dropdown>();
+            noticeButton = rc.Get<GameObject>("noticeButton").GetComponent<Button>();
+            accountButton = rc.Get<GameObject>("accountButton").GetComponent<Button>();
+            beginButton = rc.Get<GameObject>("beginButton").GetComponent<Button>();
         }
 
-        private void TestCall()
-        {
-            TestCallHelper.OnTestCall().Coroutine();
-        }
     }
 }

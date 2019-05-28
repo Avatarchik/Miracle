@@ -63,7 +63,7 @@ namespace ETModel
                 //消息分发组件    收到消息后由哪个handler调用处理
                 Game.Scene.AddComponent<MessageDispatcherComponent>();
 
-                //进入热更层，执行热更Init
+                //进入热更层，执行ETHotfix.Init()
                 Game.Hotfix.GotoHotfix();
 
                 //测试    分发数值监听事件

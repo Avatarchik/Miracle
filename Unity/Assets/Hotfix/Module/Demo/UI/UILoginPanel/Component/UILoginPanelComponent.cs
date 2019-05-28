@@ -18,29 +18,32 @@ namespace ETHotfix
     public class UILoginPanelComponent : Component
     {
         public InputField usernameInput;
+        public InputField passwordInput;
         public Button loginButton;
+        public Button registerButton;
+        public Button accountButton;
+        public Button noticeButton;
 
         public void Awake()
         {
 
             ReferenceCollector rc = this.GetParent<UI>().GameObject.GetComponent<ReferenceCollector>();
             usernameInput = rc.Get<GameObject>("usernameInputField").GetComponent<InputField>();
+            passwordInput = rc.Get<GameObject>("passwordInputField").GetComponent<InputField>();
             loginButton = rc.Get<GameObject>("loginButton").GetComponent<Button>();
+            registerButton = rc.Get<GameObject>("registerButton").GetComponent<Button>();
+            accountButton = rc.Get<GameObject>("accountButton").GetComponent<Button>();
+            noticeButton = rc.Get<GameObject>("noticeButton").GetComponent<Button>();
 
-            loginButton.onClick.Add(() =>
-            {
-                
-                Log.Debug("向服务器发送登录消息");
-                Game.Scene.GetComponent<UIComponent>().Remove(UIType.LoginPanel);
-                ETModel.Game.Scene.GetComponent<ResourcesComponent>().UnloadBundle(UIType.LoginPanel.StringToAB());
-            });
-
-            loginButton.onClick.Add(TestCall);
+            loginButton.onClick.Add(Login);
         }
 
-        private void TestCall()
+        private void Login()
         {
-            TestCallHelper.OnTestCall().Coroutine();
+            throw new NotImplementedException();
         }
+
+
+
     }
 }

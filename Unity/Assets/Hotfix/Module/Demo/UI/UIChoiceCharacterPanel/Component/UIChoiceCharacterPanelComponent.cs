@@ -18,30 +18,38 @@ namespace ETHotfix
 
     public class UIChoiceCharacterPanelComponent : Component
     {
-        public InputField usernameInput;
-        public Button loginButton;
+        public RawImage characterShowRawImage;
+        public Button character1Button;
+        public Button character2Button;
+        public Button character3Button;
+        public Button character4Button;
+        public Button character5Button;
+        public Button beginButton;
+        public Text yournameText;
+        public Text youChoiceText;
+        public Button backChoiceButton;
+        public Text combatNumberText;
+        public Button removeCharacterButton;
 
         public void Awake()
         {
 
             ReferenceCollector rc = this.GetParent<UI>().GameObject.GetComponent<ReferenceCollector>();
-            usernameInput = rc.Get<GameObject>("usernameInputField").GetComponent<InputField>();
-            loginButton = rc.Get<GameObject>("loginButton").GetComponent<Button>();
+            characterShowRawImage = rc.Get<GameObject>("characterShowRawImage").GetComponent<RawImage>();
+            character1Button = rc.Get<GameObject>("character1Button").GetComponent<Button>();
+            character2Button = rc.Get<GameObject>("character2Button").GetComponent<Button>();
+            character3Button = rc.Get<GameObject>("character3Button").GetComponent<Button>();
+            character4Button = rc.Get<GameObject>("character4Button").GetComponent<Button>();
+            character5Button = rc.Get<GameObject>("character5Button").GetComponent<Button>();
+            beginButton = rc.Get<GameObject>("beginButton").GetComponent<Button>();
+            yournameText = rc.Get<GameObject>("yournameText").GetComponent<Text>();
+            youChoiceText = rc.Get<GameObject>("youChoiceText").GetComponent<Text>();
+            backChoiceButton = rc.Get<GameObject>("backChoiceButton").GetComponent<Button>();
+            combatNumberText = rc.Get<GameObject>("combatNumberText").GetComponent<Text>();
+            removeCharacterButton = rc.Get<GameObject>("removeCharacterButton").GetComponent<Button>();
 
-            loginButton.onClick.Add(() =>
-            {
-                
-                Log.Debug("向服务器发送登录消息");
-                Game.Scene.GetComponent<UIComponent>().Remove(UIType.LoginPanel);
-                ETModel.Game.Scene.GetComponent<ResourcesComponent>().UnloadBundle(UIType.LoginPanel.StringToAB());
-            });
-
-            loginButton.onClick.Add(TestCall);
         }
 
-        private void TestCall()
-        {
-            TestCallHelper.OnTestCall().Coroutine();
-        }
+
     }
 }
