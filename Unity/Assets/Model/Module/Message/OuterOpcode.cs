@@ -21,6 +21,14 @@ namespace ETModel
 
 // 自己的unit id
 // 所有的unit
+	[Message(OuterOpcode.C2G_EnterMyGame)]
+	public partial class C2G_EnterMyGame : IRequest {}
+
+	[Message(OuterOpcode.G2C_EnterMyGame)]
+	public partial class G2C_EnterMyGame : IResponse {}
+
+// 自己的unit id
+// 所有的unit
 	[Message(OuterOpcode.UnitInfo)]
 	public partial class UnitInfo {}
 
@@ -59,14 +67,16 @@ namespace ETModel
 		 public const ushort Actor_TransferResponse = 104;
 		 public const ushort C2G_EnterMap = 105;
 		 public const ushort G2C_EnterMap = 106;
-		 public const ushort UnitInfo = 107;
-		 public const ushort M2C_CreateUnits = 108;
-		 public const ushort Frame_ClickMap = 109;
-		 public const ushort M2C_PathfindingResult = 110;
-		 public const ushort C2R_Ping = 111;
-		 public const ushort R2C_Ping = 112;
-		 public const ushort G2C_Test = 113;
-		 public const ushort C2M_Reload = 114;
-		 public const ushort M2C_Reload = 115;
+		 public const ushort C2G_EnterMyGame = 107;
+		 public const ushort G2C_EnterMyGame = 108;
+		 public const ushort UnitInfo = 109;
+		 public const ushort M2C_CreateUnits = 110;
+		 public const ushort Frame_ClickMap = 111;
+		 public const ushort M2C_PathfindingResult = 112;
+		 public const ushort C2R_Ping = 113;
+		 public const ushort R2C_Ping = 114;
+		 public const ushort G2C_Test = 115;
+		 public const ushort C2M_Reload = 116;
+		 public const ushort M2C_Reload = 117;
 	}
 }

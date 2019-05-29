@@ -10,7 +10,7 @@ namespace ETHotfix
         {
             try
             {
-                // 创建一个ETModel层的Session
+                // 创建一个ETModel层的Session                   建立服务器连接
                 ETModel.Session session = ETModel.Game.Scene.GetComponent<NetOuterComponent>().Create(GlobalConfigComponent.Instance.GlobalProto.Address);
 				
                 // 创建一个ETHotfix层的Session, ETHotfix的Session会通过ETModel层的Session发送消息
