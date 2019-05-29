@@ -41,7 +41,7 @@ message G2C_LoginGate // IResponse
 	int32 RpcId = 90;
 	int32 Error = 91;
 	string Message = 92;
-	int64 PlayerId = 1;
+	int64 PlayerId = 1;   //返回的玩家id 用于创建游戏人物，让
 }
 
 message G2C_TestHotfixMessage // IMessage
