@@ -314,52 +314,52 @@
       <HintPath>C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/15.0/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
     </Reference>
     <Reference Include="ICSharpCode.SharpZipLib">
-      <HintPath>C:/Mine/UnityProject/Project_ET/Trunk/ET-master/Unity/Assets/Plugins/ICSharpCode.SharpZipLib.dll</HintPath>
+      <HintPath>C:/Mine/UnityProject/Miracle/Unity/Assets/Plugins/ICSharpCode.SharpZipLib.dll</HintPath>
     </Reference>
     <Reference Include="Pathfinding.ClipperLib">
-      <HintPath>C:/Mine/UnityProject/Project_ET/Trunk/ET-master/Unity/Assets/Plugins/AstarPathfindingProject/Clipper/Pathfinding.ClipperLib.dll</HintPath>
+      <HintPath>C:/Mine/UnityProject/Miracle/Unity/Assets/Plugins/AstarPathfindingProject/Clipper/Pathfinding.ClipperLib.dll</HintPath>
     </Reference>
     <Reference Include="Pathfinding.Ionic.Zip.Reduced">
-      <HintPath>C:/Mine/UnityProject/Project_ET/Trunk/ET-master/Unity/Assets/Plugins/AstarPathfindingProject/DotNetZip/Pathfinding.Ionic.Zip.Reduced.dll</HintPath>
+      <HintPath>C:/Mine/UnityProject/Miracle/Unity/Assets/Plugins/AstarPathfindingProject/DotNetZip/Pathfinding.Ionic.Zip.Reduced.dll</HintPath>
     </Reference>
     <Reference Include="Pathfinding.Poly2Tri">
-      <HintPath>C:/Mine/UnityProject/Project_ET/Trunk/ET-master/Unity/Assets/Plugins/AstarPathfindingProject/Poly2Tri/Pathfinding.Poly2Tri.dll</HintPath>
+      <HintPath>C:/Mine/UnityProject/Miracle/Unity/Assets/Plugins/AstarPathfindingProject/Poly2Tri/Pathfinding.Poly2Tri.dll</HintPath>
     </Reference>
     <Reference Include="JetBrains.Rider.Unity.Editor.Plugin.Repacked">
-      <HintPath>C:/Mine/UnityProject/Project_ET/Trunk/ET-master/Unity/Assets/Plugins/Editor/JetBrains/JetBrains.Rider.Unity.Editor.Plugin.Repacked.dll</HintPath>
+      <HintPath>C:/Mine/UnityProject/Miracle/Unity/Assets/Plugins/Editor/JetBrains/JetBrains.Rider.Unity.Editor.Plugin.Repacked.dll</HintPath>
     </Reference>
     <Reference Include="NPOI">
-      <HintPath>C:/Mine/UnityProject/Project_ET/Trunk/ET-master/Unity/Assets/Plugins/Editor/npoi/NPOI.dll</HintPath>
+      <HintPath>C:/Mine/UnityProject/Miracle/Unity/Assets/Plugins/Editor/npoi/NPOI.dll</HintPath>
     </Reference>
     <Reference Include="NPOI.OOXML">
-      <HintPath>C:/Mine/UnityProject/Project_ET/Trunk/ET-master/Unity/Assets/Plugins/Editor/npoi/NPOI.OOXML.dll</HintPath>
+      <HintPath>C:/Mine/UnityProject/Miracle/Unity/Assets/Plugins/Editor/npoi/NPOI.OOXML.dll</HintPath>
     </Reference>
     <Reference Include="NPOI.OpenXml4Net">
-      <HintPath>C:/Mine/UnityProject/Project_ET/Trunk/ET-master/Unity/Assets/Plugins/Editor/npoi/NPOI.OpenXml4Net.dll</HintPath>
+      <HintPath>C:/Mine/UnityProject/Miracle/Unity/Assets/Plugins/Editor/npoi/NPOI.OpenXml4Net.dll</HintPath>
     </Reference>
     <Reference Include="NPOI.OpenXmlFormats">
-      <HintPath>C:/Mine/UnityProject/Project_ET/Trunk/ET-master/Unity/Assets/Plugins/Editor/npoi/NPOI.OpenXmlFormats.dll</HintPath>
+      <HintPath>C:/Mine/UnityProject/Miracle/Unity/Assets/Plugins/Editor/npoi/NPOI.OpenXmlFormats.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.Advertisements">
-      <HintPath>C:/Mine/UnityProject/Project_ET/Trunk/ET-master/Unity/Library/PackageCache/com.unity.ads@2.3.1/Editor/UnityEditor.Advertisements.dll</HintPath>
+      <HintPath>C:/Mine/UnityProject/Miracle/Unity/Library/PackageCache/com.unity.ads@2.3.1/Editor/UnityEditor.Advertisements.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Advertisements">
-      <HintPath>C:/Mine/UnityProject/Project_ET/Trunk/ET-master/Unity/Library/PackageCache/com.unity.ads@2.3.1/Runtime/UnityEngine.Advertisements.dll</HintPath>
+      <HintPath>C:/Mine/UnityProject/Miracle/Unity/Library/PackageCache/com.unity.ads@2.3.1/Runtime/UnityEngine.Advertisements.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Advertisements.Editor">
-      <HintPath>C:/Mine/UnityProject/Project_ET/Trunk/ET-master/Unity/Library/PackageCache/com.unity.ads@2.3.1/Runtime/UnityEngine.Advertisements.Editor.dll</HintPath>
+      <HintPath>C:/Mine/UnityProject/Miracle/Unity/Library/PackageCache/com.unity.ads@2.3.1/Runtime/UnityEngine.Advertisements.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Editor">
-      <HintPath>C:/Mine/UnityProject/Project_ET/Trunk/ET-master/Unity/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
+      <HintPath>C:/Mine/UnityProject/Miracle/Unity/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.StandardEvents">
-      <HintPath>C:/Mine/UnityProject/Project_ET/Trunk/ET-master/Unity/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
+      <HintPath>C:/Mine/UnityProject/Miracle/Unity/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Tracker">
-      <HintPath>C:/Mine/UnityProject/Project_ET/Trunk/ET-master/Unity/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
+      <HintPath>C:/Mine/UnityProject/Miracle/Unity/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.Purchasing">
-      <HintPath>C:/Mine/UnityProject/Project_ET/Trunk/ET-master/Unity/Library/PackageCache/com.unity.purchasing@2.0.3/Editor/UnityEditor.Purchasing.dll</HintPath>
+      <HintPath>C:/Mine/UnityProject/Miracle/Unity/Library/PackageCache/com.unity.purchasing@2.0.3/Editor/UnityEditor.Purchasing.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>C:/Program Files/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>

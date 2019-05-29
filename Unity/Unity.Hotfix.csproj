@@ -98,6 +98,7 @@
     <Compile Include="Assets\Hotfix\Module\Demo\G2C_TestHotfixHandler.cs" />
     <Compile Include="Assets\Hotfix\Module\Demo\Helper\LoginHelper.cs" />
     <Compile Include="Assets\Hotfix\Module\Demo\Helper\MapHelper.cs" />
+    <Compile Include="Assets\Hotfix\Module\Demo\Helper\MyGameHelper.cs" />
     <Compile Include="Assets\Hotfix\Module\Demo\Helper\TestCallHelper.cs" />
     <Compile Include="Assets\Hotfix\Module\Demo\Helper\UILoginPanelHelper.cs" />
     <Compile Include="Assets\Hotfix\Module\Demo\M2C_CreateUnitsHandler.cs" />

@@ -46,6 +46,22 @@ message G2C_EnterMap // IResponse
 	repeated UnitInfo Units = 2;
 }
 
+message C2G_EnterMyGame // IRequest
+{
+	int32 RpcId = 90;
+}
+
+message G2C_EnterMyGame  // IResponse
+{
+	int32 RpcId = 90;
+	int32 Error = 91;
+	string Message = 92;
+	// 自己的unit id
+	int64 UnitId = 1;
+	// 所有的unit
+	repeated UnitInfo Units = 2;
+}
+
 message UnitInfo
 {
 	int64 UnitId  = 1;

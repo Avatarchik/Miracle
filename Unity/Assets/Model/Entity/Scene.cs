@@ -11,6 +11,9 @@
 		public const string Robot = "Robot";
 		public const string RobotClient = "RobotClient";
 		public const string Realm = "Realm";
+
+        //------游戏中需要的场景
+        public const string MyGame = "MyGame";
 	}
 	
 	public sealed class Scene: Entity

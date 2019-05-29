@@ -452,6 +452,9 @@ namespace ETHotfix {
     }
 
     private long playerId_;
+    /// <summary>
+    ///返回的玩家id 用于创建游戏人物，让
+    /// </summary>
     public long PlayerId {
       get { return playerId_; }
       set {
