@@ -5,6 +5,7 @@ using UnityEngine;
 //Object并非C#基础中的Object，而是 UnityEngine.Object
 using Object = UnityEngine.Object;
 
+//和ReferenceCollector类配套的编辑器类
 //自定义ReferenceCollector类在界面中的显示与功能
 [CustomEditor(typeof (ReferenceCollector))]
 //没有该属性的编辑器在选中多个物体时会提示“Multi-object editing not supported”
@@ -36,7 +37,8 @@ public class ReferenceCollectorEditor: Editor
 
 	private void DelNullReference()
 	{
-		var dataProperty = serializedObject.FindProperty("data");
+        //serializedObject属性代表的是检视面板查看对象的SerializedObject对象
+        var dataProperty = serializedObject.FindProperty("data");
 		for (int i = dataProperty.arraySize - 1; i >= 0; i--)
 		{
 			var gameObjectProperty = dataProperty.GetArrayElementAtIndex(i).FindPropertyRelative("gameObject");
@@ -53,7 +55,8 @@ public class ReferenceCollectorEditor: Editor
         referenceCollector = (ReferenceCollector) target;
 	}
 
-	public override void OnInspectorGUI()
+    //重写该方法，可以实现自定义的检视面板。
+    public override void OnInspectorGUI()
 	{
         //使ReferenceCollector支持撤销操作，还有Redo，不过没有在这里使用
         Undo.RecordObject(referenceCollector, "Changed Settings");

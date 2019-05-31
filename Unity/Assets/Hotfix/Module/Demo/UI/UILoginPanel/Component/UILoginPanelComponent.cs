@@ -40,7 +40,7 @@ namespace ETHotfix
 
         private void Login()
         {
-            throw new NotImplementedException();
+            UILoginPanelHelper.OnLoginAsync(usernameInput.text, passwordInput.text).Coroutine();
         }
 
 

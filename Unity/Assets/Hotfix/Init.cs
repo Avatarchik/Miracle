@@ -42,7 +42,7 @@ namespace ETHotfix
 
                 //调用\Unity\Assets\Hotfix\Module\Demo\UI\UILogin\System\InitSceneStart_CreateLoginUI.cs    创建UILogin 
                 //生成初始UI界面
-                Game.EventSystem.Run(EventIdType.GameStartLogin);
+                Game.EventSystem.Run(EventIdType.InitSceneStart);
                 /*
                  * 目前有三个入口:
                  * 1. EventIdType.InitSceneStart 可以进入熊猫ET自带的多人联机Demo，这个算是官方案例，极好的熟悉框架的demo

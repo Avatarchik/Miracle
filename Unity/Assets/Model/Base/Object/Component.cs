@@ -45,7 +45,6 @@ namespace ETModel
 				}
 			}
 		}
-
 		[BsonIgnore]
 		public bool IsDisposed
 		{

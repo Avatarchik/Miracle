@@ -15,10 +15,14 @@ namespace ETModel
 		{
 			try
 			{
+                // SynchronizationContext类是用于多线程之间通信的一个类，其在通讯中充当了个传输者的角色
                 //异步Socket每次接收一步就会单独分出一个线程
                 //这里使异步方法全部会回调到主线程，进行Socket线程队列同步
                 //最后让收到的所有消息都是有序的
+                //搞懂 SynchronizationContext（第一部分）【翻译】：https://www.cnblogs.com/lzxianren/p/SynchronizationContext.html
                 SynchronizationContext.SetSynchronizationContext(OneThreadSynchronizationContext.Instance);
+                //我懂了？！！
+
 
                 //挂载DebuggerComponent
                 gameObject.AddComponent<DebuggerComponent>();

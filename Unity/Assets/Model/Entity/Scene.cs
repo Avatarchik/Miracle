@@ -1,5 +1,8 @@
 ﻿namespace ETModel
 {
+    /// <summary>
+    /// 场景枚举
+    /// </summary>
 	public static class SceneType
 	{
 		public const string Share = "Share";
@@ -15,8 +18,13 @@
         //------游戏中需要的场景
         public const string MyGame = "MyGame";
 	}
-	
-	public sealed class Scene: Entity
+
+
+    /// <summary>
+    /// Scene类中定义了一个场景枚举。
+    /// Scene类继承自Entity类，Entity继承自ComponentWithId类，ComponentWithId继承自Component类
+    /// </summary>
+    public sealed class Scene: Entity
 	{
 		public string Name { get; set; }
 

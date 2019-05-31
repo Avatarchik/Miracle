@@ -2,6 +2,9 @@
 
 namespace ETModel
 {
+    /// <summary>
+    /// Game类中涉及到了4个类，Scene类，EventSystem类，ObjectPool类和Hotfix类。
+    /// </summary>
 	public static class Game
 	{
 		private static EventSystem eventSystem;
